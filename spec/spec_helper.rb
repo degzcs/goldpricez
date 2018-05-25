@@ -1,5 +1,17 @@
+# coding: utf-8
+$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
+require 'goldpricez'
 require "bundler/setup"
-require "goldpricez"
+Dir[File.join('./lib/goldpricez/**/*.rb')].each { |f| require f }
+require 'rspec'
+require 'pry'
+require 'webmock/rspec'
+require 'vcr'
+
+VCR.configure do |c|
+  c.cassette_library_dir = "spec/fixtures/cassettes"
+  c.hook_into :webmock
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

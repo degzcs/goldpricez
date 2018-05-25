@@ -9,19 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Diego Gomez"]
   spec.email         = ["diego.f.gomez.pardo@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Gem to wrap Goldpricez API}
+  spec.description   = %q{Gem to wrap Goldpricez API. This is unofficial gem (until now)}
+  spec.homepage      = "https://github.com/degzcs/goldpricez"
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
@@ -33,4 +24,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "vcr", "~> 3"
+  spec.add_development_dependency "webmock", "~> 2.1"
+  spec.add_development_dependency "spirit_hands", "~> 2"
+
+  spec.add_dependency "faraday", "~> 0.9"
+  spec.add_dependency "json", "~> 1.7"
+
 end

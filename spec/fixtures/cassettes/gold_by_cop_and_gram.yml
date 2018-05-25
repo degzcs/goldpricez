@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://goldpricez.com/api/rates/currency/cop/measure/gram
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Api-Key:
+      - f6412fdf260d55b6cb460cb4e5bad69cf6412fdf
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 May 2018 21:21:41 GMT
+      Server:
+      - Apache
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PHPSESSID=gj77k4i3cdu37dvl23289tnns7; expires=Fri, 25-May-2018 23:21:42 GMT;
+        Max-Age=7200; path=/; HttpOnly
+      Vary:
+      - Accept-Encoding,User-Agent
+      Content-Length:
+      - '226'
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: ASCII-8BIT
+      string: '"{\"ounce_price_usd\":\"1301.38\",\"gmt_ounce_price_usd_updated\":\"26-05-2018
+        01:01:00 am\",\"ounce_price_ask\":\"1301.38\",\"ounce_price_bid\":\"1301.02\",\"ounce_price_usd_today_low\":\"1299.77\",\"ounce_price_usd_today_high\":\"1307.99\",\"usd_to_cop\":\"2886.12\",\"gmt_cop_updated\":\"25-05-2018
+        09:05:00 pm\",\"ounce_in_cop\":3755938.8456,\"gram_to_ounce_formula\":0.0321,\"gram_in_usd\":41.774298,\"gram_in_cop\":120565.63694376}"'
+    http_version: 
+  recorded_at: Fri, 25 May 2018 21:21:44 GMT
+recorded_with: VCR 3.0.3
