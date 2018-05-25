@@ -1,8 +1,5 @@
 # Goldpricez
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/goldpricez`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+ This is a client to query [Goldpricez API](http://goldpricez.com/about/api)
 
 ## Installation
 
@@ -22,7 +19,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Get price by currency and measure
+
+
+```ruby
+client = Goldpricez::Client.new('f6412fdf260d55b6cb460cb4e5bad69cf6412fdf')  
+client.call(currency: 'cop', measure: 'gram') # =>
+                                              # {
+                                              #   "ounce_price_usd"=>"1301.38",
+                                              #   "gmt_ounce_price_usd_updated"=>"26-05-2018 01:01:00 am",
+                                              #   "ounce_price_ask"=>"1301.38",
+                                              #   "ounce_price_bid"=>"1301.02",
+                                              #   "ounce_price_usd_today_low"=>"1299.77",
+                                              #   "ounce_price_usd_today_high"=>"1307.99",
+                                              #   "usd_to_cop"=>"2877",
+                                              #   "gmt_cop_updated"=>"25-05-2018 10:05:00 pm",
+                                              #   "ounce_in_cop"=>3744070.26,
+                                              #   "gram_to_ounce_formula"=>0.0321,
+                                              #   "gram_in_usd"=>41.774298,
+                                              #   "gram_in_cop"=>120184.655346
+                                              #}
+```
 
 ## Development
 
@@ -32,7 +49,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/goldpricez. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/degzcs/goldpricez. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 

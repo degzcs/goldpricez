@@ -1,4 +1,5 @@
 require 'faraday'
+require 'json'
 module Goldpricez 
   class Request
     class GoldpricezError < StandardError; end
